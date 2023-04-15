@@ -64,7 +64,6 @@ jobs:
 
       - name: Publish API on Render
         if: success()
-      - name: Deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
