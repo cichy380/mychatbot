@@ -7,7 +7,7 @@
     "start:backend": "nx serve backend",
     "start:frontend": "nx serve frontend",
     "build:backend": "nx build backend",
-    "build:frontend": "nx build frontend --base-href /frontend/",
+    "build:frontend": "nx build frontend --base-href /mychatbot/",
     "test:frontend:ci": "nx test frontend --watch=false --browsers=ChromeHeadless",
     "lint:frontend": "nx lint frontend",
     "e2e": "nx e2e"
