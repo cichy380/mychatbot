@@ -2,7 +2,16 @@
   "name": "mychatbot",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "nx": "nx",
+    "start:backend": "nx serve backend",
+    "start:frontend": "nx serve frontend",
+    "build:backend": "nx build backend",
+    "build:frontend": "nx build frontend --base-href /frontend/",
+    "test:frontend:ci": "nx test frontend --watch=false --browsers=ChromeHeadless",
+    "lint:frontend": "nx lint frontend",
+    "e2e": "nx e2e"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",
