@@ -30,9 +30,6 @@ jobs:
       - name: Build Angular App
         run: npm run build:frontend
 
-      - name: Build Nest Api
-        run: npm run build:backend
-
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v2
@@ -62,7 +59,7 @@ jobs:
           publish_dir: dist/apps/frontend
           enable_jekyll: true
 
-      - name: Publish API on Render
+      - name: Publish API to Render
         if: success()
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
