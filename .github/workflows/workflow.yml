@@ -18,6 +18,15 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Make .env file
+        uses: SpicyPizza/create-envfile@v1.3
+        with:
+          envkey_TEST: ${{ secrets.OPENAI_API_KEY }}
+          envkey_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          directory: apps/backend/src
+          file_name: .env
+          fail_on_empty: false
+
       - name: Install dependencies
         run: npm ci
 

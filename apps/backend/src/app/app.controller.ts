@@ -18,6 +18,9 @@ export class AppController {
 
   @Get('test')
   getTestData() {
-    return { test: this.configService.get('TEST') };
+    return {
+      test: this.configService.get('TEST'),
+      random: Math.random()
+    };
   }
 }
