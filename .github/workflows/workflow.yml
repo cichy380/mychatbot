@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Make .env file
+      - name: Create .env file
         uses: SpicyPizza/create-envfile@v1.3
         with:
-          envkey_TEST: ${{ secrets.OPENAI_API_KEY }}
+          envkey_TEST: 'from-workflow'
           envkey_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           directory: apps/backend/src
           file_name: .env
